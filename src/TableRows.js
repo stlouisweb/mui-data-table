@@ -4,15 +4,15 @@ import TableCell from '@material-ui/core/TableCell'
 import TableBody from '@material-ui/core/TableBody'
 import TableRow from '@material-ui/core/TableRow'
 
-const TableHeadings = props => {
+const TableRows = props => {
   const { rows, defaultValue, hoverRows } = props
   return (
     <TableBody>
       {rows.map((row, i) => {
         return (
           <TableRow hover={hoverRows} key={i}>
-            {Object.values(row).map(cell =>
-              <TableCell>{cell || defaultValue}</TableCell>
+            {Object.values(row).map((cell, i) =>
+              <TableCell key={i}>{cell || defaultValue}</TableCell>
             )}
           </TableRow>
         )
@@ -21,12 +21,12 @@ const TableHeadings = props => {
   )
 }
 
-TableHeadings.propTypes = {
+TableRows.propTypes = {
   rows: PropTypes.array.isRequired,
   defaultValue: PropTypes.string.isRequired,
   hoverRows: PropTypes.bool
 }
 
-TableHeadings.displayName = 'TableHeadings'
+TableRows.displayName = 'TableRows'
 
-export default TableHeadings
+export default TableRows

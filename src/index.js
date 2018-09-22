@@ -7,7 +7,7 @@ import TableHeadings from './TableHeadings'
 import TableRows from './TableRows'
 export default class DataTable extends Component {
   static propTypes = {
-    columns: PropTypes.array.isRequired,
+    columns: PropTypes.array,
     data: PropTypes.array.isRequired,
     defaultValue: PropTypes.string,
     hoverRows: PropTypes.bool

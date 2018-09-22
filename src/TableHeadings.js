@@ -9,8 +9,8 @@ const TableHeadings = props => {
   return (
     <TableHead>
       <TableRow>
-        {columns.map(column =>
-          <TableCell component='th'>
+        {columns.map((column, i) =>
+          <TableCell key={i} component='th'>
             {column}
           </TableCell>
         )}
