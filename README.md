@@ -1,4 +1,4 @@
-# data-table
+# mui-data-table
 
 > Dynamic tables for ReactJS.
 
@@ -7,25 +7,31 @@
 ## Install
 
 ```bash
-npm install --save data-table
+npm install --save mui-data-table
 ```
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import MyComponent from 'data-table'
+import DataTable from "mui-data-table";
 
 class Example extends Component {
-  render () {
-    return (
-      <MyComponent />
-    )
+  render() {
+    const columns = ["Year", "Make", "Model"];
+
+    const data = [
+      { Year: 1967, Make: "Pontiac", Model: "Firebird" },
+      { Year: 1965, Make: "Pontiac", Model: "GTO" },
+      { Year: 1970, Make: "Plymouth", Model: "Barracuda" }
+    ];
+
+    return <DataTable columns={columns} data={data} />;
   }
 }
 ```
 
 ## License
 
-MIT © [Jeremy Plack](https://github.com/Jeremy Plack)
+MIT © [Jeremy Plack](https://github.com/stlouisweb)
