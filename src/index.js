@@ -1,22 +1,35 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import styles from './styles.css'
-
-export default class ExampleComponent extends Component {
+import Paper from '@material-ui/core/Paper'
+import Table from '@material-ui/core/Table'
+import TableHeadings from './TableHeadings'
+import TableRows from './TableRows'
+export default class DataTable extends Component {
   static propTypes = {
-    text: PropTypes.string
+    columns: PropTypes.array.isRequired,
+    data: PropTypes.array.isRequired,
+    defaultValue: PropTypes.string,
+    hoverRows: PropTypes.bool
   }
 
   render() {
     const {
-      text
+      columns,
+      data,
+      defaultValue,
+      hoverRows
     } = this.props
 
     return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
+      <Paper>
+        <Table>
+          { columns &&
+            <TableHeadings columns={columns} />
+          }
+          <TableRows rows={data} defaultValue={defaultValue || '-'} hoverRows={hoverRows} />
+        </Table>
+      </Paper>
     )
   }
 }
