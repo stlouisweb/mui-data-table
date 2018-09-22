@@ -1,12 +1,20 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-
+import { withStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import Table from '@material-ui/core/Table'
 import TableHeadings from './TableHeadings'
 import TableRows from './TableRows'
-export default class DataTable extends Component {
+
+const styles = {
+  root: {
+    overflowY: 'auto',
+    overflowX: 'auto'
+  }
+}
+class DataTable extends Component {
   static propTypes = {
+    classes: PropTypes.object.isRequired,
     columns: PropTypes.array,
     data: PropTypes.array.isRequired,
     defaultValue: PropTypes.string,
@@ -15,6 +23,7 @@ export default class DataTable extends Component {
 
   render() {
     const {
+      classes,
       columns,
       data,
       defaultValue,
@@ -22,7 +31,7 @@ export default class DataTable extends Component {
     } = this.props
 
     return (
-      <Paper>
+      <Paper classes={{root: classes.root}}>
         <Table>
           { columns &&
             <TableHeadings columns={columns} />
@@ -33,3 +42,4 @@ export default class DataTable extends Component {
     )
   }
 }
+export default withStyles(styles)(DataTable)
