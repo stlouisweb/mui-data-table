@@ -1,10 +1,11 @@
 {
-  "name": "data-table",
+  "name": "mui-data-table",
   "version": "1.0.0",
-  "description": "Dynamic tables for ReactJS.",
+  "description": "Declarative dynamic Material-UI tables.",
   "author": "Jeremy Plack",
   "license": "MIT",
   "repository": "stlouisweb/data-table",
+  "homepage": "https://stlouisweb.github.io/data-table",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
