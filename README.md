@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save mui-data-table
+npm install --save mui3-data-table
 ```
 
 ## Usage
