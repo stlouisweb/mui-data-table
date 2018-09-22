@@ -3,6 +3,7 @@
 > Dynamic tables for ReactJS.
 
 [![NPM](https://img.shields.io/npm/v/data-table.svg)](https://www.npmjs.com/package/data-table) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Build Status](https://travis-ci.com/stlouisweb/mui-data-table.svg?branch=master)](https://travis-ci.com/stlouisweb/mui-data-table)
 
 ## Install
 
